@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix Burger</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background: #f7f7f7;
+            color: #222;
+        }
+        
+        header {
+            background: #111;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #ffb000;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 17px;
+        }
+        
+        nav a:hover {
+            color: #ffb000;
+        }
+        
+        .hero {
+            min-height: 500px;
+            background: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("https://images.unsplash.com/photo-1568901346375-23c9450c58cd") center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+        
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #ffb000;
+            color: #111;
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #ff8c00;
+        }
+        
+        .menu {
+            padding: 60px 8%;
+            text-align: center;
+        }
+        
+        .menu h2 {
+            font-size: 40px;
+            margin-bottom: 35px;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding-bottom: 25px;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .card h3 {
+            margin: 18px 0 10px;
+            font-size: 24px;
+        }
+        
+        .card p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .price {
+            display: block;
+            color: #e68a00;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .about {
+            background: #111;
+            color: white;
+            padding: 60px 10%;
+            text-align: center;
+        }
+        
+        .about h2 {
+            color: #ffb000;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+        
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+        
+        .contact {
+            padding: 60px 8%;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            font-size: 35px;
+            margin-bottom: 25px;
+        }
+        
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px;
+            margin: 8px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        
+        .contact textarea {
+            height: 120px;
+        }
+        
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        @media (max-width: 800px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav a {
+                margin: 0 8px;
+            }
+            .hero h1 {
+                font-size: 40px;
+            }
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo"> havas</div>
+
+        <nav>
+            <a href="#home">Bosh sahifa</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">Biz haqimizda</a>
+            <a href="#contact">Aloqa</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div>
+            <h1>havas food</h1>
+            <p>hammyon bop mahsulotlar bizda!</p>
+            <a href="#menu" class="btn">Menu ko‘rish</a>
+        </div>
+    </section>
+
+
+    <!-- MENU -->
+    <section class="menu" id="menu">
+
+        <h2>Bizning Menu</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" alt="Classic Burger">
+
+                <h3>yangi daraxtdan uzilgan mevaalar</h3>
+
+                <p>Mol go‘shti, pishloq, pomidor va maxsus sous.</p>
+
+                <span class="price">35 000 so‘m</span>
+
+                <button class="btn" onclick="buy('Classic Burger')">
+                    Buyurtma berish
+                </button>
+            </div>
+
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b" alt="Cheese Burger">
+
+                <h3>yangi mahsulotlar</h3>
+
+                <p>Yumshoq bulochka, go‘sht, cheddar pishlog‘i va sous.</p>
+
+                <span class="price">40 000 so‘m</span>
+
+                <button class="btn" onclick="buy('Cheese Burger')">
+                    Buyurtma berish
+                </button>
+            </div>
+
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add" alt="Double Burger">
+
+                <h3>turli xil shokoladlar</h3>
+
+                <p>Ikki dona go‘shtli kotlet, pishloq va maxsus sous.</p>
+
+                <span class="price">50 000 so‘m</span>
+
+                <button class="btn" onclick="buy('Double Burger')">
+                    Buyurtma berish
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <h2>HAVAS</h2>
+
+        <p>
+            havas food — hamyonbop va qulay sevuvchilar uchun yaratilgan supermarket-food loyihasi. Biz yangi va sifatli mahsulotlardan foydalanamiz.
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <h2>Biz bilan bog‘laning</h2>
+
+        <form onsubmit="sendMessage(event)">
+
+            <input type="text" id="name" placeholder="Ismingiz" required>
+
+            <br>
+
+            <input type="tel" id="phone" placeholder="Telefon raqamingiz" required>
+
+            <br>
+
+            <textarea id="message" placeholder="Xabaringiz" required></textarea>
+
+            <br>
+
+            <button class="btn" type="submit">
+                Yuborish
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Mix Burger. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function buy(product) {
+            alert(product + " tanlandi! Buyurtmangiz qabul qilindi.");
+        }
+
+        function sendMessage(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+
+            alert(
+                "Rahmat, " + name +
+                "! Xabaringiz muvaffaqiyatli yuborildi."
+            );
+
+            event.target.reset();
+        }
+    </script>
+
+</body>
+
+</html>

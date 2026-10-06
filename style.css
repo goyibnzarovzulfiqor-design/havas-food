@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f7f7f7;
+    color: #222;
+}
+
+
+/* HEADER */
+
+header {
+    background: #111;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #05b405;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: #0fab1f;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 500px;
+    background: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("https://images.unsplash.com/photo-1568901346375-23c9450c58cd") center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+    background: #ffb000;
+    color: #111;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #ff8c00;
+}
+
+
+/* MENU */
+
+.menu {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding-bottom: 25px;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 18px 0 10px;
+    font-size: 24px;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    line-height: 1.5;
+}
+
+.price {
+    display: block;
+    color: #e68a00;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* ABOUT */
+
+.about {
+    background: #111;
+    color: white;
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.about h2 {
+    color: #ffb000;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+
+/* CONTACT */
+
+.contact {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    margin: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #ffb000;
+}
+
+.contact textarea {
+    height: 120px;
+    resize: none;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+    .hero h1 {
+        font-size: 40px;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .menu h2 {
+        font-size: 32px;
+    }
+}
